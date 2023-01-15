@@ -1,0 +1,49 @@
+git init
+git checkout -b main
+git branch -d master
+New-Item README.md
+notepad README.md
+git add README.md
+git commit -m "Write duck, moose and cat in README.md file"
+git checkout -b feature1
+notepad README.md
+git add README.md
+git commit
+git checkout main
+notepad README.md
+git add README.md
+git commit
+git checkout main
+git merge feature1
+notepad README.md
+git add README.md
+git commit
+git tag extinct 76ef244
+git graph
+git reset --hard 6f452ad
+notepad README.md
+git branch feature2
+notepad README.md
+git add README.md
+git commit
+git checkout feature2
+ls
+New-Item fix1.txt
+git add fix1.txt
+git commit -m "Create file fix1.txt"
+New-Item fix2.txt
+git add fix2.txt
+git commit -m "Create file fix2.txt"
+ls
+git checkout main
+ls
+git cherry-pick -x d67ccd4
+ls
+notepad fix2.txt
+git add fix2.txt
+git commit -m "Write all commands in fix2.txt"
+git remote add origin https://github.com/RehasLiamsi/Labb1Javaverktyg.git
+git remote
+git push -u --all --dry-run origin
+git push -u --all origin
+git graph
